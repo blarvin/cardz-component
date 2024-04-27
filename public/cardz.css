@@ -1,0 +1,55 @@
+.card {
+    position: absolute;
+    width: 100px;
+    height: 160px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.resize-handle {
+    width: 10px;
+    height: 10px;
+    background-color: darkblue;
+    position: absolute;
+    cursor: se-resize;
+    display: none; /* Handles are hidden by default */
+}
+
+.card:hover .resize-handle {
+    display: block; /* Handles are visible when the card is hovered */
+}
+
+.resize-handle.top-left {
+    top: -5px;
+    left: -5px;
+    cursor: nw-resize;
+}
+
+.resize-handle.top-right {
+    top: -5px;
+    right: -5px;
+    cursor: ne-resize;
+}
+
+.resize-handle.bottom-left {
+    bottom: -5px;
+    left: -5px;
+    cursor: sw-resize;
+}
+
+.resize-handle.bottom-right {
+    bottom: -5px;
+    right: -5px;
+    cursor: se-resize;
+}
+
+.delete-btn {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+    color: red;
+    background-color: transparent;
+    border: none;
+}
