@@ -12,9 +12,9 @@ app.get("/", (req, res) => {
       console.error("Error rendering index page:", err);
       return res.status(500).send("An error occurred rendering the page");
     }
-    res.send(html);
   });
 });
+
 
 app.listen(port, (err) => {
   if (err) {
