@@ -15,7 +15,6 @@ app.get("/", (req, res) => {
   });
 });
 
-
 app.listen(port, (err) => {
   if (err) {
     console.error("Failed to start server:", err);
