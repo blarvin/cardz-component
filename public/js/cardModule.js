@@ -1,10 +1,19 @@
-function createCard() {
-  // Create a card, add to screen, add resize handles, add delete button, make draggable
+function createCard(options = {}) {
   const card = makeCard();
+
+  if (options.resize) {
+    addResizeHandles(card);
+  }
+
+  if (options.deleteBtn) {
+    addDeleteButton(card);
+  }
+
+  if (options.drag) {
+    makeDraggable(card);
+  }
+
   addToScreen(card);
-  addResizeHandles(card);
-  addDeleteButton(card);
-  makeDraggable(card);
 }
 
 let zIndex = 1;

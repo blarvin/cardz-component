@@ -7,7 +7,11 @@ function createNewCardButton() {
 
   newCardButton.addEventListener("click", () => {
     try {
-      createCard();
+      createCard({
+        resize: true,
+        deleteBtn: true,
+        drag: true,
+      });
     } catch (error) {
       console.error("Error adding a card:", error.message, error.stack);
     }
