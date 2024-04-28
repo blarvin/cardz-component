@@ -1,32 +1,30 @@
-# Cardz Component
+# Cardz-Component
 
-A web application showcasing a UI card component that is draggable, resizable, and dynamically creatable. This project demonstrates the functionality of modular, reusable UI components within a web application context.
+A web application designed to demonstrate a UI card component that is both draggable and resizable. This project showcases the development of modular, reusable UI components in a web application setting, focusing on user interaction and dynamic content manipulation.
 
 ## Overview
 
-The application is built using Node.js with Express for the backend, and Vanilla JavaScript, HTML, and CSS for the frontend. It features a minimalistic web application to demonstrate the capabilities of a UI card component that users can interact with by adding new cards, dragging them across the screen, and resizing them.
+The project architecture is built on Vanilla JavaScript for front-end logic and styling, with Node.js for a simple server setup. The application serves static files without the need for Express, simplifying the architecture to focus on the front-end components. Technologies used include HTML and CSS for structure and styling, and Vanilla JavaScript to enable the dynamic features of the card components.
 
 ## Features
 
-- Dynamically add new UI card components to the screen.
-- Drag cards across the screen using the right mouse button.
-- Resize cards by dragging resize handles located at the corners.
-- Delete cards from the screen.
-- Minimalistic design focusing on functionality and user interaction.
+- Users can dynamically create new UI card components.
+- Cards can be dragged across the screen and resized using mouse interactions.
+- The application starts with a single card, with the ability to add more and interact with each individually.
+- Minimalistic design emphasizes functionality and user interaction over complex aesthetics.
 
 ## Getting started
 
 ### Requirements
 
 - Node.js
-- npm
 
 ### Quickstart
 
-1. Clone the repository to your local machine.
-2. Install the dependencies by running `npm install` in the project root directory.
-3. Start the application using `npm start`.
-4. Open your browser and navigate to `http://localhost:3001` to view the application.
+1. Clone the project repository.
+2. Navigate to the project directory.
+3. Run `node app.js` to start the server.
+4. Open `http://localhost:3001` in your browser to view the application.
 
 ### License
 
