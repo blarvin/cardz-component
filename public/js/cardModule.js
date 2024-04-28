@@ -1,5 +1,6 @@
 function createCard(options = {}) {
-  const card = makeCard();
+  const parent = options.parentId;
+  const card = makeCard(parent);
 
   if (options.resize) {
     addResizeHandles(card);
@@ -13,7 +14,14 @@ function createCard(options = {}) {
     makeDraggable(card);
   }
 
-  addToScreen(card);
+  //addToScreen(card);
+  addToPage(card, parent);
+}
+
+function addToPage(card, parent) {
+  const element = document.getElementById(parent);
+  element.appendChild(card);
+  console.log(`Card added to ${parent}.`);
 }
 
 let zIndex = 1;
@@ -22,12 +30,14 @@ function addZIndex() {
   return zIndex++; // Increment and return the new z-index value
 }
 
-function makeCard() {
+function makeCard(parentId) {
   const card = document.createElement("div");
   card.className = "card";
   card.style.zIndex = addZIndex();
-  card.style.left = "50px";
-  card.style.top = "50px";
+  const parent = document.getElementById(parentId);
+  const parentRect = parent.getBoundingClientRect();
+  card.style.left = parentRect.x + 50 + "px";
+  card.style.top = parentRect.y + 50 + "px";
   return card;
 }
 

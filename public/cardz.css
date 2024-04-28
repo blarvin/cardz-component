@@ -53,3 +53,10 @@
     background-color: transparent;
     border: none;
 }
+
+#cards-container {
+    width: 95%;
+    height: 1800px;
+    border: 2px solid hwb(108 11% 16%);
+    min-height: 1000px;
+}

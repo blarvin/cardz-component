@@ -11,6 +11,7 @@ function createNewCardButton() {
         resize: true,
         deleteBtn: true,
         drag: true,
+        parentId: "cards-container",
       });
     } catch (error) {
       console.error("Error adding a card:", error.message, error.stack);
