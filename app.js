@@ -6,14 +6,43 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-  res.render("index", (err, html) => {
-    if (err) {
-      console.error("Error rendering index page:", err);
-      return res.status(500).send("An error occurred rendering the page");
+// app.get("/", (req, res) => {
+//   res.render("index", (err) => {
+//     if (err) {
+//       console.log(err);
+//       return res.status(500).send("Error rendering view.");
+//     }
+//   });
+// });
+
+app.get('/', (req, res, next) => {
+
+  res.render('index', (err, html) => {
+
+    if(err) {
+      return next(err); 
     }
+
+    res.send(html);
+
   });
+
 });
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  
+  console.log(err); 
+  res.status(500).send('Error rendering view');
+
+})
+
+
+
+// app.get('/', (req, res) => {
+//   res.render('index');
+// });
+
 
 app.listen(port, (err) => {
   if (err) {
